@@ -50,9 +50,11 @@ A continuación se muestra el diagrama de flujo que representa el plan de ejecuc
 
 
 ## ADQUISICIÓN DE LA SEÑAL
+
 <div style="text-align: center;">
     <img src="señal.jpg" alt="señal ECG" width="500" />
 </div>
+
 
 ## PRE- PROCESAMIENTO DE LA SEÑAL
 
