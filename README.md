@@ -48,7 +48,8 @@ A continuación se muestra el diagrama de flujo que representa el plan de ejecuc
 
 
 ## ADQUISICIÓN DE LA SEÑAL
-![señal ECG](señal.jpg)
+<img src="señal.jpg" alt="señal ECG" width="300" />
+
 ## PRE- PROCESAMIENTO DE LA SEÑAL
 
 ## ANÁLISIS DE LA HRV EN EL DOMINIO DEL TIEMPO 
