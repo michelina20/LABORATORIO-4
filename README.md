@@ -44,7 +44,9 @@ Sin embargo, se implemento la wavelet de Morlet, ya que, proporciona un balance 
 
 A continuación se muestra el diagrama de flujo que representa el plan de ejecución de la presente práctica: 
 
-![Diagrama de Flujo](diagrama.jpg)
+
+<img src="diagrama.jpg" alt="Diagrama de Flujo" width="900" />
+
 
 
 ## ADQUISICIÓN DE LA SEÑAL
