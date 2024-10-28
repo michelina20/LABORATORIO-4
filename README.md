@@ -1,14 +1,14 @@
 # LABORATORIO 4 -> Variabilidad de la Frecuencia Cardiaca usando la Transformada Wavelet
 ## TABLA DE CONTENIDOS
 
-1. Objetivo y Metodología del Experimento
-2. Fundamento teórico
-3. Diagrama de flujo mostrando el plan de acción para cumplir el objetivo de la práctica
-4. Adquisición de la señal
-5. Pre-procesamiento de la señal
-6. Análisis de la HRV en el dominio del tiempo
-7. Aplicación de transformada Wavelet
-8. Aplicación biomédica
+1. [Objetivo y Metodología del Experimento](#objetivo-y-metodología-del-experimento)
+2. [Fundamento teórico](#fundamento-teórico)
+3. [Diagrama de flujo mostrando el plan de acción para cumplir el objetivo de la práctica](#diagrama-de-flujo-mostrando-el-plan-de-acción-para-cumplir-el-objetivo-de-la-práctica)
+4. [Adquisición de la señal](#adquisición-de-la-señal)
+5. [Pre-procesamiento de la señal](#pre--procesamiento-de-la-señal)
+6. [Análisis de la HRV en el dominio del tiempo](#análisis-de-la-hrv-en-el-dominio-del-tiempo)
+7. [Aplicación de transformada Wavelet](#aplicación-de-transformada-wavelet)
+8. [Aplicación biomédica](#aplicación-biomédica)
    
 ## OBJETIVO Y METODOLOGÍA DEL EXPERIMENTO
 El objetivo esencial de la presente práctica es analizar la variabilidad de la frecuencia cardíaca (HRV) haciendo uso de la aplicación de la transformada wavelet, permitiendo identificar cambios en las frecuencias características asociadas con la actividad simpática y parasimpática del sistema nervioso autónomo. Posterior al análisis, se pretender comprender cómo varían estas frecuencias a lo largo del tiempo en una señal cardíaca en reposo, observando sus patrones temporales y espectrales. Este enfoque permitirá una interpretación más precisa de la dinámica temporal de la señal cardíaca, facilitando la identificación de tendencias y características clave que aporten información relevante sobre el comportamiento de la HRV en diferentes estados fisiológicos.
