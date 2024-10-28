@@ -1,4 +1,4 @@
-# LABORATORIO 4 -> Variabilidad de la Frecuencia Cardiaca usando la Transformada Wavelet
+# LABORATORIO 4 - Variabilidad de la Frecuencia Cardiaca usando la Transformada Wavelet
 ## TABLA DE CONTENIDOS
 
 1. [Objetivo y Metodología del Experimento](#objetivo-y-metodología-del-experimento)
