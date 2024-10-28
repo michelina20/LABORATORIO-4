@@ -9,7 +9,7 @@
 6. [Análisis de la HRV en el dominio del tiempo](#análisis-de-la-hrv-en-el-dominio-del-tiempo)
 7. [Aplicación de transformada Wavelet](#aplicación-de-transformada-wavelet)
 8. [Aplicación biomédica](#aplicación-biomédica)
-9. [Consentimiento informado]()
+9. [Consentimiento informado](#consentimiento-informado)
    
 ## OBJETIVO Y METODOLOGÍA DEL EXPERIMENTO
 El objetivo esencial de la presente práctica es analizar la variabilidad de la frecuencia cardíaca (HRV) haciendo uso de la aplicación de la transformada wavelet, permitiendo identificar cambios en las frecuencias características asociadas con la actividad simpática y parasimpática del sistema nervioso autónomo. Posterior al análisis, se pretender comprender cómo varían estas frecuencias a lo largo del tiempo en una señal cardíaca en reposo, observando sus patrones temporales y espectrales. Este enfoque permitirá una interpretación más precisa de la dinámica temporal de la señal cardíaca, facilitando la identificación de tendencias y características clave que aporten información relevante sobre el comportamiento de la HRV en diferentes estados fisiológicos.
