@@ -139,6 +139,20 @@ print(f"pNN50: {pnn50:.2f}%")
 
 ```
 
+Los resultados obtenidos fueron los siguientes: 
+
+- Frecuencia de muestreo: 100 Hz
+- Media: 0.05 mV
+- Varianza: 0.01 (mV)^2
+- Desviación Estándar: 0.1 mV
+- Mediana: 0.04 mV
+- SDNN: 0.09 s
+- RMSSD: 0.10 s
+- pNN50: 42.89%
+
+Con todo esto, se analiza que el SDNN es un indicador de la variabilidad total de los intervalos R-R. Un valor de 0.09 s sugiere una variabilidad moderada en la frecuencia cardíaca. Un SDNN más alto indica una mejor adaptación del sistema cardiovascular, mientras que valores más bajos pueden asociarse con estrés o problemas de salud. De igual forma, para el RMSSD, un valor de 0.10 s indica que hay una respuesta parasimpática activa, lo que es deseable, ya que sugiere una buena capacidad de recuperación del corazón. Un RMSSD alto suele asociarse con una buena salud cardiovascular y un estado de relajación. En esa misma línea, un pNN50 del 42.89% es bastante alto y sugiere una buena capacidad del corazón para responder a cambios en el estado emocional o físico. Valores más altos de pNN50 indican una mayor influencia parasimpática, lo que es un signo positivo para la salud cardiovascular.
+
+Del análisis anterior se pued considerar que el paciente analizado tiene un sistema cardiovascular con una variabilidad moderada y una buena respuesta del sistema nervioso parasimpático, sin embargo, es importante considerar que los valores de HRV pueden verse afectados por diversos factores, como la actividad física reciente, el estrés, la calidad del sueño y el estado emocional.
 
 ## APLICACIÓN DE TRANSFORMADA WAVELET
 
