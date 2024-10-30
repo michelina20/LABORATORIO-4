@@ -184,7 +184,7 @@ def aplicar_transformada_wavelet(datos, fs):
 
 El resultado de lo anterior fue el siguiente espectrograma:
 
-![Espectrograma de la Señal](Espectro wave.png)
+![Espectrorama](espectroeste.png)
 
 Adicional a ello con el fin de calcular las potencias de las frecuencias altas y bajas se hizo de la siguiente forma:
 
