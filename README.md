@@ -75,14 +75,15 @@ Finalmente, a partir de la señal ECG se calculó una frecuencia cardíaca de 84
 Como primer parámetro, se utiliza un filtro Butterworth pasabanda para procesar la señal ECG. ¿Por qué?. bien, un filtro pasabanda permite solo el paso de las frecuencias entre dos valores de corte (una frecuencia baja y una alta), eliminando las frecuencias fuera de este rango. Esto es útil para eliminar ruidos de alta y baja frecuencia que no pertenecen a la señal ECG.
 Uso de la función butter_bandpass
 
-´´´
+```
 def butter_bandpass(lowcut, highcut, fs, order=4):
     nyquist = 0.5 * fs  # Frecuencia de Nyquist
     low = lowcut / nyquist
     high = highcut / nyquist
     b, a = butter(order, [low, high], btype='band')
     return b, a
-´´´
+```
+
 Donde lowcut y highcut son frecuencias de corte inferior y superior del filtro, respectivamente. Estas definen el rango de frecuencias permitidas. Asimismo, fs es la frecuencia de muestreo de la señal y order el orden del filtro, que determina la pendiente del filtro. Un orden más alto da un filtro más “empinado” o selectivo. 
 
 Además, la  frecuencia de  Nyquist se calcula como nyquist = 0.5 * fs. Es la mitad de la frecuencia de muestreo y representa el límite máximo de frecuencia que puede ser analizado sin aliasing. Después, se divide cada frecuencia de corte por la frecuencia de Nyquist, resultando en valores de corte low y high que el filtro utiliza para determinar las bandas de paso (Normalización de frecuencias de corte) y finalmente ```butter``` genera los coeficientes b y a para el filtro Butterworth pasabanda, aplicando el tipo de filtro (```btype='band'```  indica un filtro pasabanda).
