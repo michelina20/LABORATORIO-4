@@ -73,6 +73,7 @@ Finalmente, a partir de la señal ECG se calculó una frecuencia cardíaca de 84
 ## PRE- PROCESAMIENTO DE LA SEÑAL
 
 Como primer parámetro, se utiliza un filtro Butterworth pasabanda para procesar la señal ECG. ¿Por qué?. bien, un filtro pasabanda permite solo el paso de las frecuencias entre dos valores de corte (una frecuencia baja y una alta), eliminando las frecuencias fuera de este rango. Esto es útil para eliminar ruidos de alta y baja frecuencia que no pertenecen a la señal ECG.
+
 Uso de la función butter_bandpass
 
 ```
