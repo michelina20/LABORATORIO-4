@@ -105,6 +105,8 @@ Para finalizar este apartado, se visualiza la señal ECG filtrada:
 
 ## ANÁLISIS DE LA HRV EN EL DOMINIO DEL TIEMPO 
 
+
+
 ## APLICACIÓN DE TRANSFORMADA WAVELET
 
 ## APLICACIÓN BIOMÉDICA
