@@ -57,9 +57,17 @@ La imagen adjunta muestra el montaje experimental para obtener la señal ECG del
     <img src="señal.jpg" alt="señal ECG" width="500" />
 </div>
 
+
 Por otro lado, a continuación se muestra la gráfica de la señal cruda con todas sus características:
 
 ![Diagrama de Flujo](señalcruda.png)
+
+
+Se empleó una frecuencia de muestreo de 100 Hz, apropiado para obtener una representación básica de la señal ECG. Con un tiempo total de muestreo de 300 segundos (5 minutos), se logró una cantidad adecuada de datos para realizar un análisis detallado tanto en el dominio del tiempo como en el dominio de frecuencia. Del mismo modo, para garantizar la precisión de la señal captada, se configuró el sistema a una resolución de 12 bits, lo cual permite una representación detallada de las variaciones de voltaje en la señal ECG.
+
+En concordancia, la señal adquirida presenta una media de 1982.72 mV y una mediana de 1960.00 mV, valores que indican la estabilidad de la señal alrededor de su valor central y ayudan a verificar su simetría. La varianza poblacional es de 68484.72 (mV)^2 y la desviación estándar es de 261.70 mV, lo cual refleja la dispersión de los valores de voltaje respecto a la media y permite evaluar la consistencia de la señal. 
+
+Finalmente, a partir de la señal ECG se calculó una frecuencia cardíaca de 84.56 latidos por minuto, lo cual proporciona una base adecuada para el análisis de la variabilidad de la frecuencia cardíaca (HRV) en los dominios requeridos por el estudio.
 
 
 ## PRE- PROCESAMIENTO DE LA SEÑAL
