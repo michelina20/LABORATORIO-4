@@ -105,6 +105,39 @@ Para finalizar este apartado, se visualiza la señal ECG filtrada:
 
 ## ANÁLISIS DE LA HRV EN EL DOMINIO DEL TIEMPO 
 
+La variabilidad de la frecuencia cardíaca (HRV) es un indicador esencial del estado del sistema nervioso autónomo y se puede analizar en diferentes dominios. En este informe, nos enfocamos en el análisis de HRV en el dominio del tiempo, calculando parámetros clave como SDNN, RMSSD y pNN50.
+
+El parámetro SDNN se refiere a la desviación Estándar de los Intervalos R-R y mide la variabilidad total de los intervalos R-R. Un valor alto indica una buena capacidad de adaptación del corazón a diferentes condiciones.
+
+El calculo de la SDNN se realizó de la siguiente manera: 
+
+```
+# Calcular SDNN
+sdnn = np.std(rr_intervals) if rr_intervals.size > 0 else 0
+print(f"SDNN: {sdnn:.2f} s")
+
+```
+Por otro lado, RMSSD se define como la raíz cuadrada de la media de las diferencias al cuadrado de los intervalos R-R y ete parámetro es sensible a la actividad del sistema nervioso parasimpático.
+
+Su calculo se realizó de la siguiente forma: 
+
+```
+# Calcular RMSSD
+rmssd = np.sqrt(np.mean(np.square(np.diff(rr_intervals)))) if rr_intervals.size > 1 else 0
+print(f"RMSSD: {rmssd:.2f} s")
+
+```
+
+Como último parámetro, el pNN50 hace referencia a la proporción de intervalos R-R que difieren en más de 50 ms y mide la cantidad de intervalos que son significativamente diferentes entre sí.
+
+Se empleó el siguiente código para su respectivo calculo 
+
+```
+# Calcular pNN50
+pnn50 = np.sum(np.abs(np.diff(rr_intervals)) > 0.05) / len(rr_intervals) * 100 if rr_intervals.size > 0 else 0
+print(f"pNN50: {pnn50:.2f}%")
+
+```
 
 
 ## APLICACIÓN DE TRANSFORMADA WAVELET
