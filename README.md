@@ -160,28 +160,35 @@ De acuerdo al fundamento teórico previamente expuesto, se elige el uso de la tr
 
 ### Generación del Espectrograma
 
-El espectrograma se genera utilizando la función `cwt` de la biblioteca `scipy`, que calcula la transformada wavelet de la señal en función del tiempo y la frecuencia.
+El espectrograma se genera utilizando la función `cwt` de la biblioteca `scipy`, que calcula la transformada wavelet de la señal en función del tiempo y la frecuencia mediante una función de la siguiente manera:
 
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy import signal
+def aplicar_transformada_wavelet(datos, fs):
+    widths = np.arange(1, 100)  # Escalas
+    cwt_matrix, freqs = pywt.cwt(datos, widths, 'cmor', sampling_period=1/fs)
+    freqs = freqs[::-1]
+    cwt_matrix = cwt_matrix[::-1]
+    
+    # Graficar el espectrograma
+    plt.figure(figsize=(12, 6))
+    plt.imshow(np.abs(cwt_matrix), extent=[0, len(datos)/fs, freqs[0], freqs[-1]], aspect='auto', cmap='viridis')
+    plt.colorbar(label='Potencia')
+    plt.yscale('log')
+    plt.ylabel('Frecuencia (Hz)')
+    plt.xlabel('Tiempo (s)')
+    plt.title('Espectrograma CWT - Wavelet Morlet')
+    plt.show()
+    
+    return cwt_matrix, freqs
+```
 
-# Definición de la señal y parámetros
-signal_data = [tus_datos_aqui]
-wavelet = 'cmor'  # Wavelet Morlet
-scales = np.arange(1, 128)  # Rango de escalas
+Adicional a ello con el fin de calcular las potencias de las frecuencias altas y bajas se hizo de la siguiente forma:
 
-# Cálculo de la Transformada Wavelet Continua
-coefficients, frequencies = signal.cwt(signal_data, wavelet, scales)
+```python
+ cwt_matrix, freqs = aplicar_transformada_wavelet(datos, fs)
 
-# Visualización
-plt.imshow(np.abs(coefficients), extent=[tiempo_minimo, tiempo_maximo, frecuencias_minimas, frecuencias_maximas], aspect='auto', cmap='jet')
-plt.title('Espectrograma de la Señal')
-plt.ylabel('Frecuencia (Hz)')
-plt.xlabel('Tiempo (s)')
-plt.colorbar(label='Magnitud')
-plt.show()
+        # Calcular potencias LF y HF
+        potencia_LF, potencia_HF = calcular_potencias_bandap(cwt_matrix, freqs)
 ```
 
 En cuanto al análisis de frecuencias bajas y altas producido por la aplicación de esta transformada se pudo concluir que hubo una clara predominacion de la actividad parasimpátca la cual se vio relacionada en una potencia de estas frecuencias bastnate alta en comparación a las frecuencias bajas, lo cual también podría deberse a los criterios de filtrado utilicados en este caso.
