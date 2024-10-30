@@ -50,8 +50,9 @@ A continuación se muestra el diagrama de flujo que representa el plan de ejecuc
 
 
 ## ADQUISICIÓN DE LA SEÑAL
-En un inicio, la adquisición de la señal ECG fue ejecutada a través del uso de un un módulo AD8232, el cual permite captar de forma precisa la actividad cardíaca en tiempo real. Este módulo se integró con el microcontrolador STM32, que procesó la señal capturada y facilitó su almacenamiento en un archivo de texto que se importó a python para poder visualizar la señal. 
-La imagen adjunta muestra el montaje experimental para obtener la señal ECG del paciente 
+En un inicio, la adquisición de la señal ECG fue ejecutada a través del uso de un un módulo AD8232, el cual permite captar de forma precisa la actividad cardíaca en tiempo real. Este módulo se integró con el microcontrolador STM32, que procesó la señal capturada y facilitó su almacenamiento en un archivo de texto que se importó a python para poder visualizar la señal.
+
+La imagen adjunta muestra el montaje experimental para obtener la señal ECG del paciente:
 <div style="text-align: center;">
     <img src="señal.jpg" alt="señal ECG" width="500" />
 </div>
