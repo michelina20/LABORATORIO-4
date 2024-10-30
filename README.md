@@ -156,6 +156,37 @@ Del análisis anterior se pued considerar que el paciente analizado tiene un sis
 
 ## APLICACIÓN DE TRANSFORMADA WAVELET
 
+De acuerdo al fundamento teórico previamente expuesto, se elige el uso de la transformada Wavelet de tipo orgar la cual es ideal para esta señal ECG pues es una señal de tipo estacionario, el cual es capaz de dectar variaciones en distintas escalas de tiempo lo cual coincide con el objetivo de este laboratorio. Esta aplicación se ejecutó de la siguiente forma:
+
+### Generación del Espectrograma
+
+El espectrograma se genera utilizando la función `cwt` de la biblioteca `scipy`, que calcula la transformada wavelet de la señal en función del tiempo y la frecuencia.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import signal
+
+# Definición de la señal y parámetros
+signal_data = [tus_datos_aqui]
+wavelet = 'cmor'  # Wavelet Morlet
+scales = np.arange(1, 128)  # Rango de escalas
+
+# Cálculo de la Transformada Wavelet Continua
+coefficients, frequencies = signal.cwt(signal_data, wavelet, scales)
+
+# Visualización
+plt.imshow(np.abs(coefficients), extent=[tiempo_minimo, tiempo_maximo, frecuencias_minimas, frecuencias_maximas], aspect='auto', cmap='jet')
+plt.title('Espectrograma de la Señal')
+plt.ylabel('Frecuencia (Hz)')
+plt.xlabel('Tiempo (s)')
+plt.colorbar(label='Magnitud')
+plt.show()
+```
+
+En cuanto al análisis de frecuencias bajas y altas producido por la aplicación de esta transformada se pudo concluir que hubo una clara predominacion de la actividad parasimpátca la cual se vio relacionada en una potencia de estas frecuencias bastnate alta en comparación a las frecuencias bajas, lo cual también podría deberse a los criterios de filtrado utilicados en este caso.
+
+
 ## APLICACIÓN BIOMÉDICA
 Como estudiantes de ingeniería biomédica es de interés conocer y comprender el análisis de la variabilidad de la frecuencia cardíaca (HRV), a causa de que tiene múltiples aplicaciones biomédicas como por ejemplo la información que proporciona sobre el estado del sistema nervioso autónomo y la salud cardiovascular. Gracias al uso de esta aplicación, se pueden hacer evaluaciones de estrés y la respuesta autónoma, puesto que, la HRV es un indicador sensible del equilibrio entre la actividad simpática y parasimpática. Una HRV baja puede indicar estrés elevado, fatiga o desequilibrio autónomo, útil en estudios de manejo de estrés y condiciones como la fatiga crónica o trastornos de ansiedad. Además, otra aplicación es el diagnóstico y monitoreo de enfermedades cardiovasculares gracias a que los cambios en la HRV pueden señalar riesgos o presencia de enfermedades cardíacas, como arritmias, insuficiencia cardíaca y eventos como infartos. La HRV se utiliza en la monitorización de pacientes cardíacos para prever posibles complicaciones.
 
